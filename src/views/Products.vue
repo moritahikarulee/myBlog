@@ -38,17 +38,17 @@ const pictures = reactive([
   },
   {
     id: 2,
-    title: "Delicious pizza",
+    title: "獲取土味情話",
     url: "/images/products-02.png",
   },
   {
     id: 3,
-    title: "Tasty hot dog",
+    title: "BMI 計算器",
     url: "/images/products-03.png",
   },
   {
     id: 4,
-    title: "Yummy hamburger",
+    title: "代辦事項清單",
     url: "/images/products-04.png",
   },
   {
@@ -74,15 +74,21 @@ const pictures = reactive([
 ]);
 
 const navigateToRoute = (cardId: number) => {
-  // 根據 cardId 決定跳轉的路由
-  if (cardId === 1) {
-    router.push("/products/getApiPicture");
-  } else if (cardId === 2) {
-    router.push("/route2");
-  } else if (cardId === 3) {
-    router.push("/route3");
-  } else {
-    router.push("/route4");
+  switch (cardId) {
+    case 1:
+      router.push("/products/getApiPicture");
+      break;
+    case 2:
+      router.push("/products/getLoveTalk");
+      break;
+    case 3:
+      router.push("/products/bmi");
+      break;
+    case 4:
+      router.push("/products/todoList");
+      break;
+    default:
+      router.push("/route4");
   }
 };
 </script>
@@ -117,5 +123,9 @@ const navigateToRoute = (cardId: number) => {
 .bread {
   font-size: 17px;
   margin-bottom: 25px;
+}
+
+.el-card img {
+  height: 100%s;
 }
 </style>
