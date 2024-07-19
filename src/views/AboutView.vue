@@ -36,6 +36,11 @@
   margin: 10px auto;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .card-header span {
   font-size: 1.3rem;
   font-weight: bold;

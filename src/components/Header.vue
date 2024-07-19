@@ -21,7 +21,7 @@
           <span>關於我</span>
         </div></router-link
       >
-      <router-link to="/Products">
+      <router-link to="/products">
         <div class="icon-text-container">
           <el-icon class="my-el-icon">
             <Files />
@@ -64,7 +64,7 @@
         <span>關於我</span>
       </div></router-link
     >
-    <router-link to="/Products">
+    <router-link to="/products">
       <div class="mobile-icon-text-container">
         <el-icon class="my-el-icon">
           <Files />

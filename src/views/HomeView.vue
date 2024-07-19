@@ -1,8 +1,8 @@
 <template>
   <section id="Banner">
     <div class="slogan">
-      <h5>Mandy Smith</h5>
-      <h2>發揮無限創意，為您做出好設計</h2>
+      <h5>Bochen</h5>
+      <h2>發揮無限創意，為您做出好網頁</h2>
     </div>
     <div class="circle1"></div>
     <div class="circle2"></div>
@@ -15,55 +15,25 @@
         <h2>追求美感與效能的全端工程師</h2>
         <div class="profile">
           <p>
-            我叫Mandy
-            Smith，我是一位全端工程師，擁有超過七年的撰寫網頁應用程式的經驗。我的程式熱情起源於大學時期，自那以後，我一直使用不同的程式語言和框架來撰寫強大、可擴展和易用的應用程式。我相信程式是一門藝術，我始終努力創建易於維護和理解的乾淨、優雅的程式碼。
+            我叫Bochen我是一位全端工程師，擁有做過不少完整項目的經驗，對前後端串接有一定的了解。
+            我一直使用不同的程式語言和框架來撰寫強大、可擴展和易用的應用程式。
+            我相信程式是一門藝術，我始終努力創建易於維護和理解的乾淨、優雅的程式碼。
           </p>
         </div>
         <div id="tab2" class="education">
           <h3>學歷</h3>
           <ul class="education-list">
             <li>
-              <h4>計算機科學學士學位</h4>
-              <p class="education-meta">加州大學洛杉磯分校 | 2017 - 2021</p>
-            </li>
-            <li>
-              <h4>軟件工程碩士學位</h4>
-              <p class="education-meta">卡內基美隆大學 | 2021 - 至今</p>
+              <h4>資訊管理學士學位</h4>
+              <p class="education-meta">國立屏東大學 | 2017 - 2019</p>
             </li>
           </ul>
         </div>
-        <div class="skills">
-          <h3>技能</h3>
-          <ul class="skills-list">
+        <div id="tab2" class="education">
+          <h3>作品連結與介紹</h3>
+          <ul class="education-list">
             <li>
-              <span class="skill-name">HTML</span>
-              <span class="skill-bar">
-                <span class="skill-level skill-html">90%</span>
-              </span>
-            </li>
-            <li>
-              <span class="skill-name">CSS</span>
-              <span class="skill-bar">
-                <span class="skill-level skill-css">80%</span>
-              </span>
-            </li>
-            <li>
-              <span class="skill-name">JavaScript</span>
-              <span class="skill-bar">
-                <span class="skill-level skill-js">70%</span>
-              </span>
-            </li>
-            <li>
-              <span class="skill-name">PHP</span>
-              <span class="skill-bar">
-                <span class="skill-level skill-php">60%</span>
-              </span>
-            </li>
-            <li>
-              <span class="skill-name">MySQL</span>
-              <span class="skill-bar">
-                <span class="skill-level skill-mysql">65%</span>
-              </span>
+              <PortfolioLink />
             </li>
           </ul>
         </div>
@@ -73,14 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from "vue";
-
-const photos: string[] = reactive([
-  "/images/homeCarousel-01.jpg",
-  "/images/homeCarousel-02.jpg",
-  "/images/homeCarousel-03.jpg",
-  "/images/homeCarousel-04.jpg",
-]);
+import PortfolioLink from "@/components/PortfolioLink.vue";
 </script>
 
 <style scoped>
@@ -91,7 +54,7 @@ const photos: string[] = reactive([
 /* 電腦與平板上應用的樣式 */
 
 .container {
-  padding: 50px 0;
+  padding: 30px 0;
   width: 80%;
   max-width: 1200px;
   margin: auto;
@@ -120,8 +83,8 @@ const photos: string[] = reactive([
 
 .circle1 {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 230px;
+  height: 230px;
   top: -10%;
   left: 60%;
   border-radius: 50%;
@@ -134,8 +97,8 @@ const photos: string[] = reactive([
   position: absolute;
   margin-left: 40%;
   margin-top: 20%;
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
   border-radius: 50%;
   border: 10px solid #f08ef0;
   animation: move2 10s ease-in infinite;
@@ -159,9 +122,9 @@ const photos: string[] = reactive([
   height: 0;
   top: -25%;
   left: -20%;
-  border-left: 257px solid transparent;
-  border-right: 257px solid transparent;
-  border-bottom: 405px solid rgb(71, 255, 215);
+  border-left: 230px solid transparent;
+  border-right: 230px solid transparent;
+  border-bottom: 478px solid rgb(71, 255, 215);
   position: relative;
   transform: rotate(30deg);
   animation: spin 10s ease infinite;
@@ -320,140 +283,8 @@ h2 {
 }
 
 .profile,
-.education,
-.skills {
+.education {
   margin-top: 20px;
-}
-
-/* 先設定list、li與skill name樣式 */
-
-.skills-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.skills-list li {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-content: baseline;
-}
-
-.skill-name {
-  font-weight: bold;
-  display: inline-block;
-  width: 80px;
-  margin-right: 30px;
-  font-size: 20px;
-}
-
-/* 設定bar的外層樣式 */
-
-.skill-bar {
-  background-color: #ddd;
-  height: 20px;
-  border-radius: 20px;
-  display: inline-block;
-  width: 250px;
-  position: relative;
-  margin-bottom: 10px;
-  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* 設定bar的內層樣式 */
-
-.skill-level {
-  background-color: #4caf50;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  text-align: center;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* 設定各項目的顏色與動畫 */
-
-.skill-html {
-  animation: progress-html 2s ease-in-out;
-  background: linear-gradient(to right, #f89e59, #ff4500);
-  width: 90%;
-}
-
-.skill-css {
-  animation: progress-css 2s ease-in-out;
-  background: linear-gradient(to right, #ff1ee5, #c075f5);
-  width: 80%;
-}
-
-.skill-js {
-  animation: progress-js 2s ease-in-out;
-  background: linear-gradient(to right, #ffd700, #ffa500);
-  width: 70%;
-}
-
-.skill-php {
-  animation: progress-php 2s ease-in-out;
-  background: linear-gradient(to right, #07ce5d, #dbea38);
-  width: 60%;
-}
-
-.skill-mysql {
-  animation: progress-mysql 2s ease-in-out;
-  background: linear-gradient(to right, #3b228b, #00bfff);
-  width: 60%;
-}
-
-/* skill Animation */
-
-@keyframes progress-html {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 90%;
-  }
-}
-
-@keyframes progress-css {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 80%;
-  }
-}
-
-@keyframes progress-js {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 70%;
-  }
-}
-
-@keyframes progress-php {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 60%;
-  }
-}
-
-@keyframes progress-mysql {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 65%;
-  }
 }
 
 /* 手機 */
@@ -461,9 +292,9 @@ h2 {
 @media screen and (max-width: 767px) {
   .circle1 {
     position: absolute;
-    width: 500px;
-    height: 500px;
-    top: -10%;
+    width: 110px;
+    height: 110px;
+    top: 10% !important;
     left: 60%;
     border-radius: 50%;
     border: 15px solid #f89e59;
@@ -475,8 +306,8 @@ h2 {
     position: absolute;
     margin-left: 40%;
     margin-top: 20%;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
   }
 
   .shape {
@@ -504,11 +335,6 @@ h2 {
   .description {
     width: 95%;
     margin: auto;
-  }
-
-  .skill-name {
-    width: 120px;
-    margin-right: 5px;
   }
 }
 </style>

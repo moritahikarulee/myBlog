@@ -7,8 +7,7 @@ import { createPinia } from "pinia";
 import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-// 引入 App 根組件
+import "@fortawesome/fontawesome-free/css/all.css"; // 引入 App 根組件
 import App from "./App.vue";
 
 // 創建一個應用
