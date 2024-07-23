@@ -8,6 +8,7 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import productsRoutes from "./productsRoutes";
 import NoteView from "../views/NoteView.vue";
+import ContactMe from "@/views/ContactMe.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: "/note",
       name: "note",
       component: NoteView,
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: ContactMe,
     },
     ...(productsRoutes as RouteRecordRaw[]),
   ],

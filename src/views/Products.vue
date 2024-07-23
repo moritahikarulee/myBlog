@@ -53,7 +53,7 @@ const pictures = reactive([
   },
   {
     id: 5,
-    title: "Delicious pizza",
+    title: "猜數字遊戲",
     url: "/images/products-05.png",
   },
   {
@@ -86,6 +86,9 @@ const navigateToRoute = (cardId: number) => {
       break;
     case 4:
       router.push("/products/todoList");
+      break;
+    case 5:
+      router.push("/products/guessNumber");
       break;
     default:
       router.push("/route4");
