@@ -29,7 +29,7 @@
   display: flex;
   justify-content: center;
   gap: 18px;
-  padding: 15px 5px;
+  padding: 8px 5px;
 }
 .github-link a,
 .cake-link a {

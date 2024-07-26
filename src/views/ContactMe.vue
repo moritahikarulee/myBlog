@@ -3,7 +3,7 @@
     <el-card class="box-card">
       <div class="header">聯絡我</div>
       <el-form ref="contactForm" :model="form" class="form">
-        <el-form-item label="姓名">
+        <el-form-item label="暱稱">
           <el-input v-model="form.name" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="郵箱">
@@ -21,6 +21,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { ElMessage } from "element-plus";
+import { onMounted, onUnmounted } from "vue";
 
 const form = ref({
   name: "",
@@ -29,12 +30,28 @@ const form = ref({
 });
 
 const submitForm = () => {
-  ElMessage({
-    message: "感謝您的訊息，我們會盡快回覆您！",
-    type: "success",
-  });
-  console.log("Submitted form:", form.value);
+  if (!form.value.name || !form.value.email || !form.value.message) {
+    ElMessage({
+      message: "請填入完整資料",
+      type: "error",
+    });
+  } else {
+    ElMessage({
+      message: "感謝您的訊息，我們會盡快回覆您！",
+      type: "success",
+    });
+    console.log("Submitted form:", form.value);
+  }
 };
+onMounted(() => {
+  document.body.style.background =
+    "linear-gradient(to right, #FFE9E9, #D6F0FD)";
+});
+
+onUnmounted(() => {
+  // 當組件卸載時，清除背景設置以避免影響到其他頁面
+  document.body.style.background = "";
+});
 </script>
 
 <style scoped>
@@ -42,6 +59,7 @@ const submitForm = () => {
   margin: 26px auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 15px 0;
 }
 
@@ -90,8 +108,8 @@ const submitForm = () => {
 
 /* 使用了 scoped CSS，直接修改可能不會影響到 Element Plus 的組件，
 因為 scoped CSS 只作用於當前組件的根元素。
-一種解決方案是使用深度選擇器（::v-deep 或 /deep/）來穿透 scoped 樣式。 */
-::v-deep .el-form-item__label {
+一種解決方案是使用深度選擇器來穿透 scoped 樣式。 */
+:deep(.el-form-item__label) {
   font-size: 17px;
   font-weight: 600;
 }
