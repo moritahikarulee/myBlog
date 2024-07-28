@@ -10,6 +10,12 @@
           </template>
           <img src="/images/studyHeadshot.jpg" />
           <template #footer>
+            <p class="content">自我介紹</p>
+            <p class="footer2p">
+              各位好，我是
+              Bochen，目標是成為一名全端工程師，畢業於國立屏東大學資訊管理系，<!--
+              -->最近有經過資策會密集且專業的培訓，加上自己的努力學習，目前正在積極尋找新的工作機會
+            </p>
             <p class="footerP">以下是我的個人資料連結跟作品連結</p>
             <PortfolioLink />
           </template>
@@ -34,11 +40,13 @@
             />
           </div>
           <template #footer>
+            <p class="content">網站介紹</p>
             <p class="footer2p">
               這個網站是我在練習時建立的，客戶端使用 Vite 和 Vue3，服務器端使用
               Node.js 和 Express，<!--
-  -->這網站建立的目的是展示我的練習成果和學習筆記。目前網站還在持續改進中，<!--
-  -->有甚麼問題與指教可以聯絡我，之後還會陸續增加更多小功能和學習筆記，敬請期待！
+  -->這網站建立的目的是展示我的練習成果和學習筆記。目前網站還在持續改進且增加中，<!--
+  -->有甚麼問題與指教可以聯絡我，之後還會陸續增加更多實用的小功能供大家使用，<!--
+  -->學習筆記也慢慢準備中，會寫上我學習上一路上以來遇到的問題以及解決方式，敬請期待！
             </p>
           </template>
         </el-card>
@@ -51,7 +59,24 @@
 import PortfolioLink from "@/components/PortfolioLink.vue";
 import { reactive } from "vue";
 
-const technologyImgs = reactive([
+interface TechnologyImg {
+  id: string;
+  src: string;
+  alt: string;
+  title: string;
+}
+
+/*
+reactive 函數會將一個普通的 JavaScript 對象轉換為一個深層響應式對象。
+這意味著對象中的所有屬性（包括嵌套屬性）都會變成響應式的。由於 reactive 返回的是一個代理對象，
+這個代理對象允許動態添加或刪除屬性，因此 TypeScript 無法嚴格檢查對象的結構。
+
+ref 函數則是用來創建一個包含單一值的響應式對象。這個值可以是基本類型（如字符串、數字）或對象。
+當 ref 包含一個對象時，這個對象本身並不會變成深層響應式的，只有 ref 的 .value 屬性是響應式的。
+由於 ref 的這種行為，TypeScript 可以更嚴格地檢查 ref 包含的值的類型。
+*/
+
+const technologyImgs: TechnologyImg[] = reactive([
   {
     id: "asd001",
     src: "/src/assets/vue-9-logo-svgrepo-com.svg",
@@ -106,6 +131,18 @@ const technologyImgs = reactive([
     alt: "nodejs",
     title: "nodejs",
   },
+  {
+    id: "asd010",
+    src: "/src/assets/express-svgrepo-com.svg",
+    alt: "express",
+    title: "express",
+  },
+  {
+    id: "asd011",
+    src: "/src/assets/github-142-svgrepo-com.svg",
+    alt: "github",
+    title: "github",
+  },
 ]);
 </script>
 
@@ -136,11 +173,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 16px;
 }
 
 .svg-img {
-  width: 60px;
+  width: 62px;
   transition: transform 0.3s;
 }
 
@@ -149,7 +186,7 @@ img {
 }
 
 .content {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
   font-family: "Pacifico", cursive; /* 使用可愛的字體 */
@@ -157,7 +194,7 @@ img {
 }
 
 .footerP {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-top: 15px;
   text-align: center;
@@ -166,7 +203,7 @@ img {
 }
 
 .footer2p {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Pacifico", cursive; /* 使用可愛的字體 */
   color: #454545; /* 較淺的黑灰色 */
   white-space: normal; /* 自動換行，避免多餘的空白 */
