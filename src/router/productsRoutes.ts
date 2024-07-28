@@ -5,7 +5,6 @@ import GetLoveTalk from "@/components/GetLoveTalk.vue";
 import BMI from "@/components/BMI.vue";
 import TodoList from "@/components/TodoList/TodoList.vue";
 import GuessNumber from "@/components/GuessNumber.vue";
-import { pa } from "element-plus/es/locales.mjs";
 
 const productsRoutes = [
   {
