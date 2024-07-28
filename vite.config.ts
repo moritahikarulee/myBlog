@@ -6,6 +6,8 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // 部屬用 base 路徑
+  base: "/myBlog/",
   plugins: [vue()],
   resolve: {
     alias: {
