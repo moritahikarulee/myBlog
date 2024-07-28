@@ -8,7 +8,7 @@
               <span>認識我</span>
             </div>
           </template>
-          <img src="/myBlog/images/studyHeadshot.jpg" />
+          <img src="/images/studyHeadshot.jpg" />
           <template #footer>
             <p class="content">自我介紹</p>
             <p class="footer2p">
