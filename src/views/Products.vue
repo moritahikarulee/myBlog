@@ -58,12 +58,12 @@ const pictures = reactive([
   },
   {
     id: 6,
-    title: "Tasty hot dog",
+    title: "天氣預報",
     url: "/myBlog/images/products-06.png",
   },
   {
     id: 7,
-    title: "Yummy hamburger",
+    title: "火車時刻表",
     url: "/myBlog/images/products-07.png",
   },
   {

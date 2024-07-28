@@ -8,7 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "noEmit": true,
-    "types": ["node"],
+    "types": ["node", "./prismjs"],
   },
   "include": ["vite.config.ts"]
 }
