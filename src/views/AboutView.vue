@@ -8,7 +8,7 @@
               <span>認識我</span>
             </div>
           </template>
-          <img src="/images/studyHeadshot.jpg" />
+          <img src="/myBlog/images/studyHeadshot.jpg" />
           <template #footer>
             <p class="content">自我介紹</p>
             <p class="footer2p">
@@ -79,67 +79,67 @@ ref 函數則是用來創建一個包含單一值的響應式對象。這個值�
 const technologyImgs: TechnologyImg[] = reactive([
   {
     id: "asd001",
-    src: "/src/assets/vue-9-logo-svgrepo-com.svg",
+    src: "/myBlog/images/vue-9-logo-svgrepo-com.svg",
     alt: "vue3",
     title: "vue3",
   },
   {
     id: "asd002",
-    src: "/src/assets/vite-svgrepo-com.svg",
+    src: "/myBlog/images/vite-svgrepo-com.svg",
     alt: "vite",
     title: "vite",
   },
   {
     id: "asd003",
-    src: "/src/assets/typescript-svgrepo-com.svg",
+    src: "/myBlog/images/typescript-svgrepo-com.svg",
     alt: "typescript",
     title: "typescript",
   },
   {
     id: "asd004",
-    src: "/src/assets/html-5-svgrepo-com.svg",
+    src: "/myBlog/images/html-5-svgrepo-com.svg",
     alt: "html5",
     title: "html5",
   },
   {
     id: "asd005",
-    src: "/src/assets/element-plus-svgrepo-com.svg",
+    src: "/myBlog/images/element-plus-svgrepo-com.svg",
     alt: "element-plus",
     title: "element-plus",
   },
   {
     id: "asd006",
-    src: "/src/assets/css-3-svgrepo-com.svg",
+    src: "/myBlog/images/css-3-svgrepo-com.svg",
     alt: "css3",
     title: "css3",
   },
   {
     id: "asd007",
-    src: "/src/assets/bootstrap-svgrepo-com.svg",
+    src: "/myBlog/images/bootstrap-svgrepo-com.svg",
     alt: "bootstrap",
     title: "bootstrap",
   },
   {
     id: "asd008",
-    src: "/src/assets/git-icon-svgrepo-com.svg",
+    src: "/myBlog/images/git-icon-svgrepo-com.svg",
     alt: "git",
     title: "git",
   },
   {
     id: "asd009",
-    src: "/src/assets/node-js-svgrepo-com.svg",
+    src: "/myBlog/images/node-js-svgrepo-com.svg",
     alt: "nodejs",
     title: "nodejs",
   },
   {
     id: "asd010",
-    src: "/src/assets/express-svgrepo-com.svg",
+    src: "/myBlog/images/express-svgrepo-com.svg",
     alt: "express",
     title: "express",
   },
   {
     id: "asd011",
-    src: "/src/assets/github-142-svgrepo-com.svg",
+    src: "/myBlog/images/github-142-svgrepo-com.svg",
     alt: "github",
     title: "github",
   },

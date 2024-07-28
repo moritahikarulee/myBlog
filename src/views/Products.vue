@@ -34,42 +34,42 @@ const pictures = reactive([
   {
     id: 1,
     title: "取得 API 圖片",
-    url: "/images/products-01.png",
+    url: "/myBlog/images/products-01.png",
   },
   {
     id: 2,
     title: "獲取土味情話",
-    url: "/images/products-02.png",
+    url: "/myBlog/images/products-02.png",
   },
   {
     id: 3,
     title: "BMI 計算器",
-    url: "/images/products-03.png",
+    url: "/myBlog/images/products-03.png",
   },
   {
     id: 4,
     title: "代辦事項清單",
-    url: "/images/products-04.png",
+    url: "/myBlog/images/products-04.png",
   },
   {
     id: 5,
     title: "猜數字遊戲",
-    url: "/images/products-05.png",
+    url: "/myBlog/images/products-05.png",
   },
   {
     id: 6,
     title: "Tasty hot dog",
-    url: "/images/products-06.png",
+    url: "/myBlog/images/products-06.png",
   },
   {
     id: 7,
     title: "Yummy hamburger",
-    url: "/images/products-07.png",
+    url: "/myBlog/images/products-07.png",
   },
   {
     id: 8,
     title: "Delicious pizza",
-    url: "/images/products-08.png",
+    url: "/myBlog/images/products-08.png",
   },
 ]);
 
