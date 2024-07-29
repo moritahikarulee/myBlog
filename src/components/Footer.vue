@@ -17,7 +17,7 @@
   background-color: #f8f9fa;
   color: #343a40;
   text-align: center;
-  padding: 10px 0;
+  padding: 8px 0;
   font-family: "Nunito", sans-serif;
 }
 
@@ -37,7 +37,7 @@
   background-color: #343a40;
   color: #f8f9fa;
   text-align: center;
-  padding: 12px 0;
+  padding: 10px 0;
   font-family: "Nunito", sans-serif;
 }
 

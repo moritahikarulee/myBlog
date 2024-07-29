@@ -6,6 +6,8 @@ import BMI from "@/components/BMI.vue";
 import TodoList from "@/components/TodoList/TodoList.vue";
 import GuessNumber from "@/components/GuessNumber.vue";
 import WeatherForecast from "@/components/WeatherForecast.vue";
+import MealSelector from "@/components/MealSelector.vue";
+import PlaceholderComponent from "@/components/PlaceholderComponent.vue";
 
 const productsRoutes = [
   {
@@ -42,6 +44,16 @@ const productsRoutes = [
     path: "/products/weatherForecast",
     name: "WeatherForecast",
     component: WeatherForecast,
+  },
+  {
+    path: "/products/mealSelector",
+    name: "MealSelector",
+    component: MealSelector,
+  },
+  {
+    path: "/products/placeholderComponent",
+    name: "PlaceholderComponent",
+    component: PlaceholderComponent,
   },
 ];
 

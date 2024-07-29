@@ -33,7 +33,7 @@ const router = useRouter();
 const pictures = reactive([
   {
     id: 1,
-    title: "取得 API 圖片",
+    title: "三日內天氣預報",
     url: "/myBlog/images/products-01.png",
   },
   {
@@ -58,17 +58,17 @@ const pictures = reactive([
   },
   {
     id: 6,
-    title: "三日內天氣預報",
+    title: "取得 API 圖片",
     url: "/myBlog/images/products-06.png",
   },
   {
     id: 7,
-    title: "火車時刻表",
+    title: "餐點選擇器",
     url: "/myBlog/images/products-07.png",
   },
   {
     id: 8,
-    title: "Delicious pizza",
+    title: "待開發中...",
     url: "/myBlog/images/products-08.png",
   },
 ]);
@@ -76,7 +76,7 @@ const pictures = reactive([
 const navigateToRoute = (cardId: number) => {
   switch (cardId) {
     case 1:
-      router.push("/products/getApiPicture");
+      router.push("/products/weatherForecast");
       break;
     case 2:
       router.push("/products/getLoveTalk");
@@ -91,10 +91,13 @@ const navigateToRoute = (cardId: number) => {
       router.push("/products/guessNumber");
       break;
     case 6:
-      router.push("/products/weatherForecast");
+      router.push("/products/getApiPicture");
+      break;
+    case 7:
+      router.push("/products/mealSelector");
       break;
     default:
-      router.push("/route4");
+      router.push("/products/placeholderComponent");
   }
 };
 </script>
@@ -120,9 +123,8 @@ const navigateToRoute = (cardId: number) => {
 
 .card-title {
   color: #3498db;
-  /* 藍色 */
   font-weight: bold;
-  font-size: 17px;
+  font-size: 18px;
   text-shadow: 1px 1px 1px rgba(92, 91, 91, 0.1);
 }
 

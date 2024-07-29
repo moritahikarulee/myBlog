@@ -9,6 +9,8 @@ import "element-plus/dist/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.css"; // 引入 App 根組件
 import App from "./App.vue";
+import "prismjs/themes/prism.css";
+import "prismjs/components/prism-javascript";
 
 // 創建一個應用
 const app = createApp(App);
