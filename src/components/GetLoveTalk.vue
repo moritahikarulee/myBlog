@@ -1,9 +1,4 @@
 <template>
-  <el-breadcrumb :separator-icon="ArrowRight" class="bread">
-    <el-breadcrumb-item :to="{ path: '/' }">home</el-breadcrumb-item>
-    <el-breadcrumb-item> <a href="/products">products </a> </el-breadcrumb-item>
-    <el-breadcrumb-item>get love talk</el-breadcrumb-item>
-  </el-breadcrumb>
   <div class="box">
     <h2>土味情話</h2>
     <el-alert
@@ -39,7 +34,6 @@ import { useLoveTalkStore } from "@/stores/LoveTalk";
 import { storeToRefs } from "pinia";
 // npm i --save-dev @types/uuid
 // 安裝 uuid 的 typescript 定義檔
-import { ArrowRight } from "@element-plus/icons-vue";
 
 // 要有 use 才會在開發工具出現
 const LoveTalkStore = useLoveTalkStore();

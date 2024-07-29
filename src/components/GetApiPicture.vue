@@ -1,9 +1,4 @@
 <template>
-  <el-breadcrumb :separator-icon="ArrowRight" class="bread">
-    <el-breadcrumb-item :to="{ path: '/' }">home</el-breadcrumb-item>
-    <el-breadcrumb-item> <a href="/products">products </a> </el-breadcrumb-item>
-    <el-breadcrumb-item>get api picture</el-breadcrumb-item>
-  </el-breadcrumb>
   <div class="box">
     <img v-for="(dog, index) in dogList" :src="dog" :key="index" />
     <br />
@@ -37,7 +32,6 @@
 import { ref } from "vue";
 import useDog from "@/hooks/useDog";
 import useHeadshot from "@/hooks/useHeadshot";
-import { ArrowRight } from "@element-plus/icons-vue";
 
 // 這邊要冒號是因為重新命名，以便在後續調用時不會與原始函數名稱混淆
 const { dogList, addDog: originalAddDog, deleteDog } = useDog();

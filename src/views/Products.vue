@@ -58,7 +58,7 @@ const pictures = reactive([
   },
   {
     id: 6,
-    title: "天氣預報",
+    title: "三日內天氣預報",
     url: "/myBlog/images/products-06.png",
   },
   {
@@ -132,6 +132,14 @@ const navigateToRoute = (cardId: number) => {
 }
 
 .el-card img {
-  height: 100%s;
+  height: 270px;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .el-card img {
+    height: 205px;
+    object-fit: cover;
+  }
 }
 </style>
