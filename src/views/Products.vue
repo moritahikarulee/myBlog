@@ -90,6 +90,9 @@ const navigateToRoute = (cardId: number) => {
     case 5:
       router.push("/products/guessNumber");
       break;
+    case 6:
+      router.push("/products/weatherForecast");
+      break;
     default:
       router.push("/route4");
   }
