@@ -27,6 +27,7 @@
     "prismjs": "^1.29.0",
     "uuid": "^10.0.0",
     "vue": "^3.4.29",
+    "vue-gtag": "^2.0.1",
     "vue-router": "^4.4.0"
   },
   "devDependencies": {

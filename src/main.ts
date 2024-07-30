@@ -11,6 +11,8 @@ import "@fortawesome/fontawesome-free/css/all.css"; // 引入 App 根組件
 import App from "./App.vue";
 import "prismjs/themes/prism.css";
 import "prismjs/components/prism-javascript";
+import VueGtagPlugin from "vue-gtag";
+import { G_ID } from "@/config";
 
 // 創建一個應用
 const app = createApp(App);
@@ -22,6 +24,24 @@ app.use(router);
 // (3) 使用 pinia
 app.use(pinia);
 app.use(ElementPlus);
+
+// 使用 vue-gtag
+const cookieConsent = localStorage.getItem("cookieConsent");
+
+if (cookieConsent === "true") {
+  app.use(VueGtagPlugin, {
+    config: { id: G_ID },
+  });
+} else {
+  window.addEventListener("cookie-consent-changed", () => {
+    const updatedConsent = localStorage.getItem("cookieConsent");
+    if (updatedConsent === "true") {
+      app.use(VueGtagPlugin, {
+        config: { id: G_ID },
+      });
+    }
+  });
+}
 
 // 掛載整個應用到 app 容器中
 app.mount("#app");
