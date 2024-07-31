@@ -38,7 +38,7 @@ const pictures = reactive([
   },
   {
     id: 2,
-    title: "獲取土味情話",
+    title: "常用貨幣兌換器",
     url: "/myBlog/images/products-02.png",
   },
   {
@@ -68,7 +68,7 @@ const pictures = reactive([
   },
   {
     id: 8,
-    title: "待開發中...",
+    title: "獲取土味情話",
     url: "/myBlog/images/products-08.png",
   },
 ]);
@@ -79,7 +79,7 @@ const navigateToRoute = (cardId: number) => {
       router.push("/products/weatherForecast");
       break;
     case 2:
-      router.push("/products/getLoveTalk");
+      router.push("/products/exchangeRate");
       break;
     case 3:
       router.push("/products/bmi");
@@ -97,7 +97,7 @@ const navigateToRoute = (cardId: number) => {
       router.push("/products/mealSelector");
       break;
     default:
-      router.push("/products/placeholderComponent");
+      router.push("/products/getLoveTalk");
   }
 };
 </script>

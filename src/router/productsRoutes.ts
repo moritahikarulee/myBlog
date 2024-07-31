@@ -8,6 +8,7 @@ import GuessNumber from "@/components/GuessNumber.vue";
 import WeatherForecast from "@/components/WeatherForecast.vue";
 import MealSelector from "@/components/MealSelector.vue";
 import PlaceholderComponent from "@/components/PlaceholderComponent.vue";
+import ExchangeRate from "@/components/ExchangeRate.vue";
 
 const productsRoutes = [
   {
@@ -54,6 +55,11 @@ const productsRoutes = [
     path: "/products/placeholderComponent",
     name: "PlaceholderComponent",
     component: PlaceholderComponent,
+  },
+  {
+    path: "/products/exchangeRate",
+    name: "ExchangeRate",
+    component: ExchangeRate,
   },
 ];
 

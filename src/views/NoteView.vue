@@ -27,6 +27,12 @@
               @click="currentArticle = Article2"
               >Javascript</el-button
             >
+            <el-button
+              class="custom-button"
+              type="primary"
+              @click="currentArticle = React"
+              >React</el-button
+            >
           </div>
           <component :is="currentArticle"></component>
         </el-card>
@@ -39,6 +45,7 @@
 import { ref } from "vue";
 import Article1 from "@/components/note/Article1.vue";
 import Article2 from "@/components/note/Article2.vue";
+import React from "@/components/note/React.vue";
 
 const currentArticle = ref(Article1);
 </script>
