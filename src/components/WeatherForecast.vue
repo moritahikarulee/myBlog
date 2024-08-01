@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>天氣預報</h2>
+    <h3 class="h3-title">天氣預報</h3>
     <el-alert
       title="十秒可以請求一次資料，本資料僅供參考，請以中央氣象局發布的資訊為準。"
       type="info"
@@ -228,13 +228,6 @@ button {
   border-radius: 5px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-weight: bold;
-  font-family: "Noto Sans TC", sans-serif;
-  color: #333;
-}
 .result {
   margin-top: 20px;
   padding: 10px;

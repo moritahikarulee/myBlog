@@ -1,5 +1,7 @@
 <template>
   <div class="box">
+    <h3 class="h3-title">獲取狗狗圖片跟大頭貼</h3>
+    <hr />
     <img v-for="(dog, index) in dogList" :src="dog" :key="index" />
     <br />
     <el-button
@@ -65,12 +67,12 @@ const addHeadshot = () => {
 
 <style scoped>
 .box {
-  margin: 20px;
+  margin: 25px;
   min-height: 1000px;
   background-color: rgb(220, 245, 255);
   box-shadow: 0 0 10px;
   border-radius: 12px;
-  padding: 21px;
+  padding: 22px;
 }
 
 button {

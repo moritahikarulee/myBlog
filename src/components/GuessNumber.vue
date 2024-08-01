@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h3 class="h3-title">猜數字遊戲</h3>
     <div class="guess-number">
       <el-input-number v-model="userGuess" :min="1" :max="100" />
       <el-button :plain="true" @click="checkGuess">我猜</el-button>
@@ -54,7 +55,7 @@ const resetNumber = () => {
 
 <style scoped>
 .container {
-  margin: 20px auto;
+  margin: 50px auto;
 }
 
 .guess-number {

@@ -33,12 +33,12 @@
 }
 .github-link a,
 .cake-link a {
-  color: #333; /* 設置連結顏色 */
-  font-size: 17px; /* 設置圖標大小 */
-  text-decoration: none; /* 移除下劃線 */
+  color: #333;
+  font-size: 17px;
+  text-decoration: none;
 }
 .github-link a:hover,
 .cake-link a:hover {
-  color: #6cc644; /* 鼠標懸停時的顏色 */
+  color: #6cc644;
 }
 </style>

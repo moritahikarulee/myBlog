@@ -2,7 +2,7 @@
   <div class="meal-selector">
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <span>早午晚餐選擇器</span>
+        <h3 class="h3-title">早午晚餐選擇器</h3>
         <p>
           因為很多人吃飯有選擇障礙，就花了一點點時間做了這個選擇器，希望解決各位的選擇困難症
         </p>
@@ -148,14 +148,6 @@ const selectMeal = (mealType: "breakfast" | "lunch" | "dinner") => {
 
 .box-card {
   height: 260px;
-}
-
-span {
-  display: block;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  font-family: "Noto Sans TC", sans-serif;
 }
 
 .button-group {

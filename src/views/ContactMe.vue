@@ -2,6 +2,14 @@
   <div class="container">
     <el-card class="box-card">
       <div class="header">聯絡我</div>
+      <!-- <el-alert
+        title="請輸入有效的電子郵件，以確保您能確實寄出信件"
+        type="info"
+        center
+        show-icon
+        :closable="false"
+        class="alert"
+      /> -->
       <el-form ref="contactForm" :model="form" class="form">
         <el-form-item label="暱稱">
           <el-input v-model="form.name" autocomplete="off"></el-input>
@@ -22,6 +30,8 @@
 import { ref } from "vue";
 import { ElMessage } from "element-plus";
 import { onMounted, onUnmounted } from "vue";
+import axios from "axios";
+import { MY_SERVER_KEY } from "@/config";
 
 const form = ref({
   name: "",
@@ -29,20 +39,42 @@ const form = ref({
   message: "",
 });
 
-const submitForm = () => {
+const validateEmail = (email: string) => {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+};
+
+const submitForm = async () => {
   if (!form.value.name || !form.value.email || !form.value.message) {
     ElMessage({
       message: "請填入完整資料",
       type: "error",
     });
-  } else {
+  } else if (!validateEmail(form.value.email)) {
     ElMessage({
-      message: "感謝您的訊息，我們會盡快回覆您！",
-      type: "success",
+      message: "請輸入有效的郵箱地址",
+      type: "error",
     });
-    console.log("Submitted form:", form.value);
+  } else {
+    try {
+      const response = await axios.post(`${MY_SERVER_KEY}/email/send`, {
+        from: form.value.email,
+        subject: `Message from ${form.value.name}`,
+        text: form.value.message,
+      });
+      ElMessage({
+        message: response.data,
+        type: "success",
+      });
+    } catch (error) {
+      ElMessage({
+        message: "發送郵件失敗，請稍後再試。",
+        type: "error",
+      });
+    }
   }
 };
+
 onMounted(() => {
   document.body.style.background =
     "linear-gradient(to right, #FFE9E9, #D6F0FD)";
@@ -66,10 +98,10 @@ onUnmounted(() => {
 .box-card {
   width: 95%;
   max-width: 600px;
-  max-height: 500px;
+  max-height: 530px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 15px;
+  padding: 5px;
 }
 
 .header {
@@ -77,9 +109,9 @@ onUnmounted(() => {
   font-size: 26px;
   font-weight: 600;
   color: #333;
-  margin-bottom: 23px;
   font-family: "Nunito", sans-serif;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2px;
 }
 
 .form {
@@ -104,6 +136,11 @@ onUnmounted(() => {
   font-weight: 600;
   background-color: #007bff; /* 淺藍色背景 */
   color: white; /* 白色文字 */
+}
+
+.alert {
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 /* 使用了 scoped CSS，直接修改可能不會影響到 Element Plus 的組件，

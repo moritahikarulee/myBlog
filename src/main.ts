@@ -13,6 +13,7 @@ import "prismjs/themes/prism.css";
 import "prismjs/components/prism-javascript";
 import VueGtagPlugin from "vue-gtag";
 import { G_ID } from "@/config";
+import "@/main.scss";
 
 // 創建一個應用
 const app = createApp(App);

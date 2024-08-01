@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <el-form ref="bmiForm" class="myForm">
-      <h4>BMI 計算器</h4>
+      <h3 class="h3-title">BMI 計算器</h3>
       <p>
         請輸入您的身高和體重，讓我們將幫您計算 BMI，並根據 BMI
         給您提出適當的建議
@@ -88,16 +88,8 @@ const giveAdvice = () => {
   padding: 15px;
 }
 
-h4 {
-  text-align: center;
-  color: #333;
-  font-size: 24px;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif; /* 新增這行 */
-}
-
 p {
-  padding: 5px 5px;
+  padding: 3px;
   color: #666;
 }
 
@@ -105,7 +97,7 @@ p {
   max-width: 500px;
   min-height: 430px;
   margin: 15px auto;
-  padding: 26px;
+  padding: 28px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 2px 4px 10px 3px rgba(0, 0, 0, 0.1);

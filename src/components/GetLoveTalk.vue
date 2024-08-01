@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <h2>土味情話</h2>
+    <h3 class="h3-title">獲取土味情話</h3>
     <el-alert
       title="會把請求的數據存在 localStorage，不想留的話記得按清空喔"
       type="warning"
@@ -65,21 +65,12 @@ const deleteTalk = () => {
 
 <style scoped>
 .box {
-  margin: 20px;
+  margin: 25px;
   min-height: 1000px;
   background-color: rgb(220, 245, 255);
   box-shadow: 0 0 10px;
   border-radius: 12px;
   padding: 25px;
-}
-
-.box h2 {
-  font-size: 30px;
-  color: #444268;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .box ul {

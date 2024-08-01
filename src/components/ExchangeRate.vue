@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h3>常用貨幣兌換器</h3>
+    <h3 class="h3-title">常用貨幣兌換器</h3>
     <el-input
       v-model="amount"
       placeholder="輸入金額"
@@ -106,13 +106,6 @@ const convertCurrency = async () => {
   padding: 10px;
 }
 
-h3 {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  color: #555;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 32px;
-}
 .input-field,
 .select-field,
 .convert-button {
