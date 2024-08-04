@@ -11,6 +11,8 @@ import "@fortawesome/fontawesome-free/css/all.css"; // 引入 App 根組件
 import App from "./App.vue";
 import "prismjs/themes/prism.css";
 import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-bash";
+import "prismjs/components/prism-json";
 import VueGtagPlugin from "vue-gtag";
 import { G_ID } from "@/config";
 import "@/main.scss";

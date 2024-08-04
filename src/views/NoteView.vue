@@ -18,6 +18,12 @@
             <el-button
               class="custom-button"
               type="primary"
+              @click="currentArticle = Deployment"
+              >部屬過程</el-button
+            >
+            <el-button
+              class="custom-button"
+              type="primary"
               @click="currentArticle = Article1"
               >Vue3</el-button
             >
@@ -42,12 +48,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import Prism from "prismjs";
+import Deployment from "@/components/note/Deployment.vue";
 import Article1 from "@/components/note/Article1.vue";
 import Article2 from "@/components/note/Article2.vue";
 import React from "@/components/note/React.vue";
 
-const currentArticle = ref(Article1);
+const currentArticle = ref(Deployment);
+
+onMounted(() => {
+  Prism.highlightAll();
+});
 </script>
 
 <style scoped>

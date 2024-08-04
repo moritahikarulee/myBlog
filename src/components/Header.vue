@@ -144,7 +144,7 @@ window.addEventListener("resize", () => {
 }
 
 .myNav h3:hover {
-  color: #0056b3; /* 滑鼠懸停時顏色變深 */
+  color: #0056b3;
 }
 
 .myNav .NavRight {
@@ -163,7 +163,6 @@ window.addEventListener("resize", () => {
 
 .myNav .NavRight a:hover {
   color: #3094ff;
-  /* 滑鼠懸停時的顏色變化 */
 }
 
 .icon-text-container {
@@ -204,7 +203,6 @@ window.addEventListener("resize", () => {
 
 .menu-icon:hover {
   border-color: #a1a1a1;
-  /* 滑鼠懸停時改變邊框顏色 */
 }
 
 .mobileNav {
@@ -248,7 +246,6 @@ window.addEventListener("resize", () => {
 
 .mobileNav a:hover {
   background-color: #e9ecef;
-  /* 滑鼠懸停時的背景顏色變化 */
 }
 
 @media (max-width: 768px) {

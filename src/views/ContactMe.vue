@@ -1,15 +1,15 @@
 <template>
   <div class="container">
     <el-card class="box-card">
-      <div class="header">聯絡我</div>
-      <!-- <el-alert
+      <h3 class="h3-title">聯絡我</h3>
+      <el-alert
         title="請輸入有效的電子郵件，以確保您能確實寄出信件"
         type="info"
         center
         show-icon
         :closable="false"
         class="alert"
-      /> -->
+      />
       <el-form ref="contactForm" :model="form" class="form">
         <el-form-item label="暱稱">
           <el-input v-model="form.name" autocomplete="off"></el-input>
@@ -57,7 +57,7 @@ const submitForm = async () => {
     });
   } else {
     try {
-      const response = await axios.post(`${MY_SERVER_KEY}/email/send`, {
+      const response = await axios.post(`${MY_SERVER_KEY}email/send`, {
         from: form.value.email,
         subject: `Message from ${form.value.name}`,
         text: form.value.message,
@@ -104,16 +104,6 @@ onUnmounted(() => {
   padding: 5px;
 }
 
-.header {
-  text-align: center;
-  font-size: 26px;
-  font-weight: 600;
-  color: #333;
-  font-family: "Nunito", sans-serif;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2px;
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -134,13 +124,13 @@ onUnmounted(() => {
   margin-top: 30px;
   border-radius: 6px;
   font-weight: 600;
-  background-color: #007bff; /* 淺藍色背景 */
-  color: white; /* 白色文字 */
+  background-color: #007bff;
+  color: white;
 }
 
 .alert {
-  padding: 5px;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin-bottom: 25px;
 }
 
 /* 使用了 scoped CSS，直接修改可能不會影響到 Element Plus 的組件，
