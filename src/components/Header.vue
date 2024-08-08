@@ -123,7 +123,7 @@ window.addEventListener("resize", () => {
 
 <style scoped>
 .myNav {
-  background-color: #ffffff;
+  background-color: #501f1f;
   color: #333333;
   display: flex;
   justify-content: space-between;
@@ -136,7 +136,7 @@ window.addEventListener("resize", () => {
   font-size: 22px;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
-  color: #007bff;
+  color: #73b7ff;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -157,7 +157,7 @@ window.addEventListener("resize", () => {
   text-decoration: none;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
-  color: #555;
+  color: #dadada;
   transition: color 0.3s ease;
 }
 
@@ -189,6 +189,7 @@ window.addEventListener("resize", () => {
 
 .menu-icon {
   display: none;
+  color: #d5d5d5;
   cursor: pointer;
   border: 2px solid #ccc;
   background-color: transparent;
@@ -202,7 +203,7 @@ window.addEventListener("resize", () => {
 }
 
 .menu-icon:hover {
-  border-color: #a1a1a1;
+  border-color: #517de3;
 }
 
 .mobileNav {

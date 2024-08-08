@@ -38,15 +38,19 @@ const { dialogVisible, acceptCookies, declineCookies, dialogWidth } =
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url("/images/internet-7119394_1280.jpg"); /* 引用 public 資料夾中的背景圖片 */
+  background-size: cover; /* 覆蓋整個容器 */
+  background-position: center top; /* 圖片從頂部開始 */
+  background-repeat: no-repeat; /* 不重複 */
+  background-attachment: fixed; /* 背景圖片固定 */
+  background-color: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+  background-blend-mode: lighten; /* 混合模式 */
+  margin: 0;
+  padding: 0;
 }
 
 .main-content {
   flex: 1;
-}
-
-* {
-  margin: 0;
-  padding: 0;
 }
 
 .dialog-content {

@@ -160,10 +160,12 @@ const technologyImgs: TechnologyImg[] = reactive([
 }
 
 .card-header span {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #3498db; /* 使用一種更鮮明的藍色 */
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 使用更輕微且簡單的陰影 */
+  color: #3498db;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: block;
+  text-align: center;
 }
 
 img {
@@ -192,8 +194,8 @@ img {
   font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
-  font-family: "Pacifico", cursive; /* 使用可愛的字體 */
-  color: #585858; /* 較淺的黑灰色 */
+  font-family: "Pacifico", cursive;
+  color: #585858;
 }
 
 .footerP {
@@ -201,14 +203,14 @@ img {
   font-weight: bold;
   margin-top: 15px;
   text-align: center;
-  font-family: "Pacifico", cursive; /* 使用可愛的字體 */
-  color: #585858; /* 較淺的黑灰色 */
+  font-family: "Pacifico", cursive;
+  color: #585858;
 }
 
 .footer2p {
   font-size: 20px;
-  font-family: "Pacifico", cursive; /* 使用可愛的字體 */
-  color: #454545; /* 較淺的黑灰色 */
+  font-family: "Pacifico", cursive;
+  color: #454545;
   white-space: normal; /* 自動換行，避免多餘的空白 */
 }
 </style>

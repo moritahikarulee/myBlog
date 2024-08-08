@@ -27,6 +27,14 @@
       <!-- 鄉鎮選擇 -->
       <el-form-item label="選擇鄉鎮">
         <el-select v-model="selectedTown" placeholder="請選擇鄉鎮">
+          <!-- 添加預設選項 -->
+          <el-option
+            v-if="!selectedCity"
+            :key="'default'"
+            :label="'請先選擇縣市'"
+            :value="null"
+            disabled
+          ></el-option>
           <!-- 從 towns 陣列中生成選項 -->
           <el-option
             v-for="town in towns"

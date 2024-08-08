@@ -240,6 +240,7 @@ h2 {
 .description h3 {
   padding: 20px 0;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .description p {

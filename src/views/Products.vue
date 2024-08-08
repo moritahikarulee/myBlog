@@ -124,7 +124,7 @@ const navigateToRoute = (cardId: number) => {
 .card-title {
   color: #3498db;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 19px;
   text-shadow: 1px 1px 1px rgba(92, 91, 91, 0.1);
 }
 
