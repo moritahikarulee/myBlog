@@ -112,13 +112,15 @@ const navigateToRoute = (cardId: number) => {
 
 .clickable-card {
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 
 .clickable-card:hover {
   transform: translateY(-5px);
-  box-shadow: 1px 5px 10px 1px rgba(173, 216, 230, 0.6);
-  /* 淺藍色陰影 */
+  box-shadow: 1px 5px 15px 1px rgba(173, 216, 230, 0.6);
 }
 
 .card-title {
@@ -126,6 +128,7 @@ const navigateToRoute = (cardId: number) => {
   font-weight: bold;
   font-size: 19px;
   text-shadow: 1px 1px 1px rgba(92, 91, 91, 0.1);
+  margin-bottom: 10px; /* 增加標題下方的間距 */
 }
 
 .bread {
@@ -136,6 +139,8 @@ const navigateToRoute = (cardId: number) => {
 .el-card img {
   height: 270px;
   object-fit: cover;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 @media (min-width: 992px) {

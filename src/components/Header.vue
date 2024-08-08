@@ -123,7 +123,7 @@ window.addEventListener("resize", () => {
 
 <style scoped>
 .myNav {
-  background-color: #501f1f;
+  background-color: #8e2626;
   color: #333333;
   display: flex;
   justify-content: space-between;
@@ -136,7 +136,7 @@ window.addEventListener("resize", () => {
   font-size: 22px;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
-  color: #73b7ff;
+  color: #e7f4ff;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
