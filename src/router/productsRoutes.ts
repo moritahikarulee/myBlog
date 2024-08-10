@@ -9,6 +9,7 @@ import WeatherForecast from "@/components/WeatherForecast.vue";
 import MealSelector from "@/components/MealSelector.vue";
 import PlaceholderComponent from "@/components/PlaceholderComponent.vue";
 import ExchangeRate from "@/components/ExchangeRate.vue";
+import YearPopulation from "@/components/YearPopulation.vue";
 
 const productsRoutes = [
   {
@@ -60,6 +61,11 @@ const productsRoutes = [
     path: "/products/exchangeRate",
     name: "ExchangeRate",
     component: ExchangeRate,
+  },
+  {
+    path: "/products/yearPopulation",
+    name: "YearPopulation",
+    component: YearPopulation,
   },
 ];
 

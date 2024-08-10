@@ -63,13 +63,18 @@ const pictures = reactive([
   },
   {
     id: 7,
-    title: "餐點選擇器",
+    title: "各縣市歷年人口統計",
     url: "/myBlog/images/products-07.png",
   },
   {
     id: 8,
     title: "獲取土味情話",
     url: "/myBlog/images/products-08.png",
+  },
+  {
+    id: 9,
+    title: "餐點選擇器",
+    url: "/myBlog/images/products-09.png",
   },
 ]);
 
@@ -94,10 +99,15 @@ const navigateToRoute = (cardId: number) => {
       router.push("/products/getApiPicture");
       break;
     case 7:
+      router.push("/products/yearPopulation");
+      break;
+    case 8:
+      router.push("/products/getLoveTalk");
+      break;
+    case 9:
       router.push("/products/mealSelector");
       break;
     default:
-      router.push("/products/getLoveTalk");
   }
 };
 </script>

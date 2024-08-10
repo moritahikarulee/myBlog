@@ -150,7 +150,7 @@ const technologyImgs: TechnologyImg[] = reactive([
 }
 
 .section-header span {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: bold;
   color: #3498db;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -181,9 +181,9 @@ img {
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  margin: 24px 0 18px 0;
+  margin: 26px 0 19px 0;
   text-align: center;
   font-family: "Pacifico", cursive;
   color: #585858;
@@ -193,6 +193,13 @@ img {
   font-size: 20px;
   font-family: "Pacifico", cursive;
   color: #454545;
+  padding: 0 50px;
   white-space: normal; /* 自動換行，避免多餘的空白 */
+}
+
+@media screen and (max-width: 768px) {
+  .section-content {
+    padding: 0px;
+  }
 }
 </style>
