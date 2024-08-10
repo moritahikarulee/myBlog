@@ -1,60 +1,52 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-12 mt-3 mb-3">
-        <el-card>
-          <template #header>
-            <div class="card-header">
-              <span>認識我</span>
-            </div>
-          </template>
-          <img src="/images/studyHeadshot.jpg" />
-          <template #footer>
-            <p class="content">自我介紹</p>
-            <p class="footer2p">
-              各位好，我是
-              Bochen，目標是成為一名全端工程師，畢業於國立屏東大學資訊管理系，<!--
-              -->最近有經過資策會密集且專業的培訓，累積了一些實戰經驗及作品，加上自己的努力學習，目前正在積極尋找新的工作機會，<!--
-              -->期許自己能夠在工作中學習更多技術，並且將自己的能力發揮到極致，希望您能花一點時間查看我的作品與簡歷，萬分感謝！
-            </p>
-            <p class="footerP">以下是我的個人資料連結跟作品連結</p>
-            <PortfolioLink />
-          </template>
-        </el-card>
+    <section class="section">
+      <div class="section-header">
+        <span>認識我</span>
+        <hr class="custom-hr" />
       </div>
-      <div class="col-md-6 col-12 mt-3">
-        <el-card>
-          <template #header>
-            <div class="card-header">
-              <span>認識網站</span>
-            </div>
-          </template>
-          <p class="content">使用技術</p>
-          <div class="svg-container">
-            <img
-              class="svg-img"
-              v-for="item in technologyImgs"
-              :key="item.id"
-              :src="item.src"
-              :alt="item.alt"
-              :title="item.title"
-            />
-          </div>
-          <template #footer>
-            <p class="content">網站介紹</p>
-            <p class="footer2p">
-              這個網站是我在練習時建立的，客戶端使用 Vite 和 Vue3，服務器端使用
-              Node.js 和 Express，<!--
-  -->這網站建立的目的是展示我的練習成果和學習筆記。目前網站還在持續改進且增加中，<!--
-  -->有甚麼問題與指教可以使用聯絡我，發 e-mail 到我的信箱，我會儘快查看。 <br />
-              <br />
-              之後還會陸續增加更多實用的小功能供大家使用，因費用問題可能會有使用上的限制，敬請見諒!<!--
-  -->學習筆記也慢慢準備中，會寫上我學習上一路上以來遇到的問題以及解決方式，敬請期待！
-            </p>
-          </template>
-        </el-card>
+      <img src="/images/studyHeadshot.jpg" />
+      <div class="section-footer">
+        <p class="section-title">自我介紹</p>
+        <p class="section-content">
+          各位好，我是
+          Bochen，目標是成為一名全端工程師，畢業於國立屏東大學資訊管理系，<!--
+          -->最近有經過資策會密集且專業的培訓，累積了一些實戰經驗及作品，加上自己的努力學習，目前正在積極尋找新的工作機會，<!--
+          -->期許自己能夠在工作中學習更多技術，並且將自己的能力發揮到極致，希望您能花一點時間查看我的作品與簡歷，萬分感謝！
+        </p>
+        <p class="section-title">以下是我的個人資料連結跟作品連結</p>
+        <PortfolioLink />
       </div>
-    </div>
+    </section>
+    <section class="section">
+      <div class="section-header">
+        <span>認識網站</span>
+        <hr class="custom-hr" />
+      </div>
+      <p class="section-title">使用技術</p>
+      <div class="svg-container">
+        <img
+          class="svg-img"
+          v-for="item in technologyImgs"
+          :key="item.id"
+          :src="item.src"
+          :alt="item.alt"
+          :title="item.title"
+        />
+      </div>
+      <div class="section-footer">
+        <p class="section-title">網站介紹</p>
+        <p class="section-content">
+          這個網站是我在練習時建立的，客戶端使用 Vite 和 Vue3，服務器端使用
+          Node.js 和 Express，<!--
+-->這網站建立的目的是展示我的練習成果和學習筆記。目前網站還在持續改進且增加中，<!--
+-->有甚麼問題與指教可以使用聯絡我，發 e-mail 到我的信箱，我會儘快查看。 <br />
+          <br />
+          之後還會陸續增加更多實用的小功能供大家使用，因費用問題可能會有使用上的限制，敬請見諒!<!--
+-->學習筆記也慢慢準備中，會寫上我學習上一路上以來遇到的問題以及解決方式，敬請期待！
+        </p>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -68,16 +60,6 @@ interface TechnologyImg {
   alt: string;
   title: string;
 }
-
-/*
-reactive 函數會將一個普通的 JavaScript 對象轉換為一個深層響應式對象。
-這意味著對象中的所有屬性（包括嵌套屬性）都會變成響應式的。由於 reactive 返回的是一個代理對象，
-這個代理對象允許動態添加或刪除屬性，因此 TypeScript 無法嚴格檢查對象的結構。
-
-ref 函數則是用來創建一個包含單一值的響應式對象。這個值可以是基本類型（如字符串、數字）或對象。
-當 ref 包含一個對象時，這個對象本身並不會變成深層響應式的，只有 ref 的 .value 屬性是響應式的。
-由於 ref 的這種行為，TypeScript 可以更嚴格地檢查 ref 包含的值的類型。
-*/
 
 const technologyImgs: TechnologyImg[] = reactive([
   {
@@ -151,16 +133,24 @@ const technologyImgs: TechnologyImg[] = reactive([
 
 <style scoped>
 .container {
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
-.row {
-  margin-right: 0;
-  margin-left: 0;
+.custom-hr {
+  border: none; /* 移除預設邊框 */
+  border-top: 1px dashed #a9a9a9;
+  margin: 25px 0;
 }
 
-.card-header span {
-  font-size: 1.6rem;
+.section {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.section-header span {
+  font-size: 1.8rem;
   font-weight: bold;
   color: #3498db;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -171,7 +161,7 @@ const technologyImgs: TechnologyImg[] = reactive([
 img {
   display: block;
   margin: auto;
-  width: 340px;
+  width: 300px;
 }
 
 .svg-container {
@@ -190,24 +180,16 @@ img {
   transform: scale(1.1);
 }
 
-.content {
-  font-size: 1.4rem;
+.section-title {
+  font-size: 1.5rem;
   font-weight: bold;
+  margin: 24px 0 18px 0;
   text-align: center;
   font-family: "Pacifico", cursive;
   color: #585858;
 }
 
-.footerP {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 15px;
-  text-align: center;
-  font-family: "Pacifico", cursive;
-  color: #585858;
-}
-
-.footer2p {
+.section-content {
   font-size: 20px;
   font-family: "Pacifico", cursive;
   color: #454545;

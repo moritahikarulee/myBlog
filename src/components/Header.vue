@@ -128,7 +128,7 @@ window.addEventListener("resize", () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 15px;
+  padding: 10px 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -136,7 +136,7 @@ window.addEventListener("resize", () => {
   font-size: 22px;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
-  color: #e7f4ff;
+  color: #ffffff;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -153,11 +153,11 @@ window.addEventListener("resize", () => {
 }
 
 .myNav .NavRight a {
-  font-size: 17px;
+  font-size: 18px;
   text-decoration: none;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
-  color: #dadada;
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
